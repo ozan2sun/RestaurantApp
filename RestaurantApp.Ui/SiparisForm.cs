@@ -106,6 +106,7 @@ namespace RestaurantApp.Ui
             {
                 _siparis.OdenenTutar = odenenTutar;
                 _siparis.Durum = durum;
+                _siparis.KapanisZamani = DateTime.Now;
                 _db.AktifSiparisler.Remove(_siparis);
                 _db.GecmisSiparisler.Add(_siparis);
                 DialogResult = DialogResult.OK;

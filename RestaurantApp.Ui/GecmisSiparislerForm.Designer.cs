@@ -57,8 +57,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvDetaylar);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Size = new System.Drawing.Size(904, 417);
-            this.splitContainer1.SplitterDistance = 179;
+            this.splitContainer1.Size = new System.Drawing.Size(537, 482);
+            this.splitContainer1.SplitterDistance = 206;
             this.splitContainer1.SplitterWidth = 20;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -71,7 +71,7 @@
             this.dgvSiparisler.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvSiparisler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSiparisler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSiparisler.Location = new System.Drawing.Point(0, 40);
+            this.dgvSiparisler.Location = new System.Drawing.Point(0, 37);
             this.dgvSiparisler.MultiSelect = false;
             this.dgvSiparisler.Name = "dgvSiparisler";
             this.dgvSiparisler.ReadOnly = true;
@@ -79,8 +79,9 @@
             this.dgvSiparisler.RowHeadersWidth = 62;
             this.dgvSiparisler.RowTemplate.Height = 28;
             this.dgvSiparisler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSiparisler.Size = new System.Drawing.Size(904, 139);
+            this.dgvSiparisler.Size = new System.Drawing.Size(537, 169);
             this.dgvSiparisler.TabIndex = 1;
+            this.dgvSiparisler.SelectionChanged += new System.EventHandler(this.dgvSiparisler_SelectionChanged);
             // 
             // label1
             // 
@@ -88,7 +89,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(904, 40);
+            this.label1.Size = new System.Drawing.Size(537, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Siparişler";
             // 
@@ -101,7 +102,7 @@
             this.dgvDetaylar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDetaylar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetaylar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDetaylar.Location = new System.Drawing.Point(0, 48);
+            this.dgvDetaylar.Location = new System.Drawing.Point(0, 37);
             this.dgvDetaylar.MultiSelect = false;
             this.dgvDetaylar.Name = "dgvDetaylar";
             this.dgvDetaylar.ReadOnly = true;
@@ -109,7 +110,7 @@
             this.dgvDetaylar.RowHeadersWidth = 62;
             this.dgvDetaylar.RowTemplate.Height = 28;
             this.dgvDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetaylar.Size = new System.Drawing.Size(904, 170);
+            this.dgvDetaylar.Size = new System.Drawing.Size(537, 219);
             this.dgvDetaylar.TabIndex = 1;
             // 
             // label2
@@ -118,7 +119,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(904, 48);
+            this.label2.Size = new System.Drawing.Size(537, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Sipariş Detayları";
             // 
@@ -126,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 417);
+            this.ClientSize = new System.Drawing.Size(537, 482);
             this.Controls.Add(this.splitContainer1);
             this.Name = "GecmisSiparislerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
