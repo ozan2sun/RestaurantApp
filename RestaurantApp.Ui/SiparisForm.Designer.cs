@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnTasi = new System.Windows.Forms.Button();
             this.cboUrun = new System.Windows.Forms.ComboBox();
@@ -67,7 +67,7 @@
             // 
             this.btnTasi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTasi.Location = new System.Drawing.Point(845, 29);
+            this.btnTasi.Location = new System.Drawing.Point(845, 30);
             this.btnTasi.Name = "btnTasi";
             this.btnTasi.Size = new System.Drawing.Size(112, 25);
             this.btnTasi.TabIndex = 1;
@@ -230,8 +230,8 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "BirimFiyat";
-            dataGridViewCellStyle3.Format = "C2";
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Format = "C2";
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column2.HeaderText = "Birim Fiyat";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
@@ -272,7 +272,7 @@
             // cboMasaNo
             // 
             this.cboMasaNo.FormattingEnabled = true;
-            this.cboMasaNo.Location = new System.Drawing.Point(710, 29);
+            this.cboMasaNo.Location = new System.Drawing.Point(719, 33);
             this.cboMasaNo.Name = "cboMasaNo";
             this.cboMasaNo.Size = new System.Drawing.Size(110, 21);
             this.cboMasaNo.TabIndex = 16;

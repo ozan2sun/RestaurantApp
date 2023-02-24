@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,6 +37,7 @@
             this.dgvUrunler = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnIptal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudBirimFiyat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             this.SuspendLayout();
@@ -77,10 +78,17 @@
             this.btnEkle.TabIndex = 14;
             this.btnEkle.Text = "EKLE";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // nudBirimFiyat
             // 
+            this.nudBirimFiyat.DecimalPlaces = 2;
             this.nudBirimFiyat.Location = new System.Drawing.Point(247, 39);
+            this.nudBirimFiyat.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudBirimFiyat.Name = "nudBirimFiyat";
             this.nudBirimFiyat.Size = new System.Drawing.Size(105, 20);
             this.nudBirimFiyat.TabIndex = 15;
@@ -107,6 +115,7 @@
             this.dgvUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUrunler.Size = new System.Drawing.Size(786, 368);
             this.dgvUrunler.TabIndex = 16;
+            this.dgvUrunler.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunler_CellDoubleClick);
             // 
             // Column1
             // 
@@ -119,18 +128,31 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "BirimFiyaT";
-            dataGridViewCellStyle1.Format = "C2";
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "C2";
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column2.HeaderText = "Birim Fiyatı";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            // 
+            // btnIptal
+            // 
+            this.btnIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIptal.Location = new System.Drawing.Point(566, 35);
+            this.btnIptal.Name = "btnIptal";
+            this.btnIptal.Size = new System.Drawing.Size(112, 25);
+            this.btnIptal.TabIndex = 17;
+            this.btnIptal.Text = "İPTAL";
+            this.btnIptal.UseVisualStyleBackColor = true;
+            this.btnIptal.Visible = false;
+            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
             // UrunlerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnIptal);
             this.Controls.Add(this.dgvUrunler);
             this.Controls.Add(this.nudBirimFiyat);
             this.Controls.Add(this.btnEkle);
@@ -157,5 +179,6 @@
         private System.Windows.Forms.DataGridView dgvUrunler;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button btnIptal;
     }
 }
