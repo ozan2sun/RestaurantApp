@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnTasi = new System.Windows.Forms.Button();
             this.cboUrun = new System.Windows.Forms.ComboBox();
@@ -42,12 +42,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvDetaylar = new System.Windows.Forms.DataGridView();
-            this.lblOdemeTutari = new System.Windows.Forms.Label();
-            this.cboMasaNo = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblOdemeTutari = new System.Windows.Forms.Label();
+            this.cboMasaNo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetaylar)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +111,7 @@
             this.btnSiparisIptal.TabIndex = 5;
             this.btnSiparisIptal.Text = "SİPARİŞ İPTAL";
             this.btnSiparisIptal.UseVisualStyleBackColor = false;
+            this.btnSiparisIptal.Click += new System.EventHandler(this.btnSiparisIptal_Click);
             // 
             // btnOdemeAl
             // 
@@ -124,6 +125,7 @@
             this.btnOdemeAl.TabIndex = 6;
             this.btnOdemeAl.Text = "ÖDEME AL";
             this.btnOdemeAl.UseVisualStyleBackColor = false;
+            this.btnOdemeAl.Click += new System.EventHandler(this.btnOdemeAl_Click);
             // 
             // btnAnasayfayaDon
             // 
@@ -137,6 +139,7 @@
             this.btnAnasayfayaDon.TabIndex = 7;
             this.btnAnasayfayaDon.Text = "ANASAYFAYA DÖN";
             this.btnAnasayfayaDon.UseVisualStyleBackColor = false;
+            this.btnAnasayfayaDon.Click += new System.EventHandler(this.btnAnasayfayaDon_Click);
             // 
             // lblMasaNo
             // 
@@ -215,27 +218,6 @@
             this.dgvDetaylar.Size = new System.Drawing.Size(689, 363);
             this.dgvDetaylar.TabIndex = 14;
             // 
-            // lblOdemeTutari
-            // 
-            this.lblOdemeTutari.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblOdemeTutari.BackColor = System.Drawing.SystemColors.Control;
-            this.lblOdemeTutari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOdemeTutari.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblOdemeTutari.Location = new System.Drawing.Point(863, 257);
-            this.lblOdemeTutari.Name = "lblOdemeTutari";
-            this.lblOdemeTutari.Size = new System.Drawing.Size(68, 32);
-            this.lblOdemeTutari.TabIndex = 15;
-            this.lblOdemeTutari.Text = "0,00₺";
-            this.lblOdemeTutari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cboMasaNo
-            // 
-            this.cboMasaNo.FormattingEnabled = true;
-            this.cboMasaNo.Location = new System.Drawing.Point(710, 29);
-            this.cboMasaNo.Name = "cboMasaNo";
-            this.cboMasaNo.Size = new System.Drawing.Size(110, 21);
-            this.cboMasaNo.TabIndex = 16;
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "UrunAd";
@@ -248,8 +230,8 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "BirimFiyat";
-            dataGridViewCellStyle1.Format = "C2";
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "C2";
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column2.HeaderText = "Birim Fiyat";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
@@ -274,6 +256,27 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 180;
             // 
+            // lblOdemeTutari
+            // 
+            this.lblOdemeTutari.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblOdemeTutari.BackColor = System.Drawing.SystemColors.Control;
+            this.lblOdemeTutari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOdemeTutari.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblOdemeTutari.Location = new System.Drawing.Point(858, 257);
+            this.lblOdemeTutari.Name = "lblOdemeTutari";
+            this.lblOdemeTutari.Size = new System.Drawing.Size(68, 32);
+            this.lblOdemeTutari.TabIndex = 15;
+            this.lblOdemeTutari.Text = "0,00₺";
+            this.lblOdemeTutari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cboMasaNo
+            // 
+            this.cboMasaNo.FormattingEnabled = true;
+            this.cboMasaNo.Location = new System.Drawing.Point(710, 29);
+            this.cboMasaNo.Name = "cboMasaNo";
+            this.cboMasaNo.Size = new System.Drawing.Size(110, 21);
+            this.cboMasaNo.TabIndex = 16;
+            // 
             // SiparisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +298,7 @@
             this.Controls.Add(this.btnTasi);
             this.Controls.Add(this.btnEkle);
             this.Name = "SiparisForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SiparisForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetaylar)).EndInit();

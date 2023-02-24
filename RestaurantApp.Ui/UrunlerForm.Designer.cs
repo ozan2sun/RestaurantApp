@@ -138,6 +138,7 @@
             this.Controls.Add(this.txtUrunAd);
             this.Controls.Add(this.label2);
             this.Name = "UrunlerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UrunlerForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudBirimFiyat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();

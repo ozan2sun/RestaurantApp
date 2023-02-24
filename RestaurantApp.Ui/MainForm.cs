@@ -13,7 +13,7 @@ namespace RestaurantApp.Ui
 {
     public partial class MainForm : Form
     {
-        KafeVeri db=new KafeVeri();
+        KafeVeri db = new KafeVeri();
         public MainForm()
         {
             InitializeComponent();
@@ -36,8 +36,8 @@ namespace RestaurantApp.Ui
             {
                 var lvi = new ListViewItem($"Masa {i}");
                 lvi.ImageKey = "bos";
-                lvi.Tag= i; //list view item üzerinde daha sonra erişebilmek için masa noyu saklıyoruz 
-                lvwMasalar.Items.Add( lvi );
+                lvi.Tag = i; //list view item üzerinde daha sonra erişebilmek için masa noyu saklıyoruz 
+                lvwMasalar.Items.Add(lvi);
             }
         }
 
@@ -50,11 +50,16 @@ namespace RestaurantApp.Ui
             //Sipariş varsa olanı buldurduk. Yoksa yeniden oluşturduk
             if (siparis == null)
             {
-                siparis =new Siparis() { MasaNo = masaNo};
+                siparis = new Siparis() { MasaNo = masaNo };
                 db.AktifSiparisler.Add(siparis);
                 lvi.ImageKey = "dolu";
             }
-            new SiparisForm(db, siparis).ShowDialog();
+            DialogResult dr=new SiparisForm(db, siparis).ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                lvi.ImageKey = "bos";
+                lvi.Selected = false;
+            }
         }
     }
 }
