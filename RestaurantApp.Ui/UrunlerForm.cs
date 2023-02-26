@@ -81,5 +81,12 @@ namespace RestaurantApp.Ui
             btnIptal.Hide();
             txtUrunAd.Focus();
         }
+
+        private void dgvUrunler_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Seçili Ürün Silinecek", "Onaylıyor musunuz?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            e.Cancel = dr == DialogResult.No;
+        }
     }
 }
