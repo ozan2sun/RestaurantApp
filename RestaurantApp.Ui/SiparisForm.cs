@@ -13,6 +13,8 @@ namespace RestaurantApp.Ui
 {
     public partial class SiparisForm : Form
     {
+        public event EventHandler<MasaTasindiEventArgs> MasaTasindi;
+
         private readonly KafeVeri _db;
         private readonly Siparis _siparis;
         BindingList<SiparisDetay> _blSiparisDetaylar;
@@ -59,7 +61,15 @@ namespace RestaurantApp.Ui
         {
             Text = $"Masa {_siparis.MasaNo}";
             lblMasaNo.Text = _siparis.MasaNo.ToString("00");
+            //Masaları combobox içine taşıma işlemi
+            cboMasaNo.Items.Clear();
+            for (int i = 1; i <= _db.MasaAdet; i++)
+            {
+                if (!_db.MasaDoluMu(i))
+                    cboMasaNo.Items.Add(i);
+            }
         }
+        
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
@@ -111,6 +121,22 @@ namespace RestaurantApp.Ui
                 _db.GecmisSiparisler.Add(_siparis);
                 DialogResult = DialogResult.OK;
             }
+        }
+
+        private void btnTasi_Click(object sender, EventArgs e)
+        {
+            if (cboMasaNo.SelectedIndex == -1) return;
+
+            int eskiMasaNo = _siparis.MasaNo;
+            int hedefNo =(int)cboMasaNo.SelectedItem;
+            _siparis.MasaNo =hedefNo;
+
+            //MasaTasindi eventini invoke et
+            if (MasaTasindi != null)
+            {
+                MasaTasindi(this, new MasaTasindiEventArgs(eskiMasaNo, hedefNo));
+            }
+            MasaNoGuncelle();
         }
     }
 }
